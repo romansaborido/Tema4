@@ -1,6 +1,6 @@
 package boletin1.ejercicio1;
 
-public class Punto {
+public class PuntoA {
 	
 	// Creamos el atributo x para representar la posicion vertical
 	int x;
@@ -8,3 +8,5 @@ public class Punto {
 	// Creamos el atributo x para representar la posicion horizontal
 	int y;
 }
+
+	

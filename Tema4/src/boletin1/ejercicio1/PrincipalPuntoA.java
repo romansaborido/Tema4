@@ -1,17 +1,17 @@
 package boletin1.ejercicio1;
 
-public class PrincipalPunto {
+public class PrincipalPuntoA {
 
 	public static void main(String[] args) {
 		
 		// Instanciamos el primer objeto punto llamado punto1
-		Punto punto1 = new Punto();
+		PuntoA punto1 = new PuntoA();
 		
 		// Instanciamos el segundo objeto punto llamado punto2
-		Punto punto2 = new Punto();
+		PuntoA punto2 = new PuntoA();
 		
 		// Instanciamos el tercer objeto punto llamado punto3
-		Punto punto3 = new Punto();
+		PuntoA punto3 = new PuntoA();
 		
 		// Establecemos las coordenadas de punto1
 		punto1.x = 5;

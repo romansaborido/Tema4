@@ -9,7 +9,7 @@ public class Artículo {
 	double precio;
 	
 	// Creamos el atributo IVA para almacenar el IVA del articulo (siempre sera el mismo)
-	final int IVA = 21;
+	final double IVA = 21;
 	
 	// Creamos el atributo cuantosQuedan para almacenar el stock del articulo
 	int cuantosQuedan;
