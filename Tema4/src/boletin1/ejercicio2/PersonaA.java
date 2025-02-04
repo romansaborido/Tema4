@@ -1,6 +1,6 @@
 package boletin1.ejercicio2;
 
-public class Persona {
+public class PersonaA {
 	
 	// Creamos el atributo dni para almacenar el dni de la persona
 	String dni;

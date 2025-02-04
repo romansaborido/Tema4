@@ -1,6 +1,6 @@
 package boletin1.ejercicio3;
 
-public class Rectangulo {
+public class RectanguloA {
 	
 	// Creamos el atributo x1 para almacenar la primera posicion vertical
 	int x1;

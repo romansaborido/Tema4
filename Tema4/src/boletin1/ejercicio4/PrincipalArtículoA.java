@@ -1,11 +1,11 @@
 package boletin1.ejercicio4;
 
-public class PrincipalArtículo {
+public class PrincipalArtículoA {
 
 	public static void main(String[] args) {
 		
 		// Instanciamos un objeto de la clase articulo
-		Artículo art1 = new Artículo();
+		ArtículoA art1 = new ArtículoA();
 		
 		// Creamos la variable PVP para almacenar el precio con IVA
 		double pvp;

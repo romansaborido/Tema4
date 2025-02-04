@@ -3,15 +3,15 @@ package boletin1.ejercicio3;
 import java.util.Random;
 import java.util.Scanner;
 
-public class PrincipalRectangulo {
+public class PrincipalRectanguloA {
 
 	public static void main(String[] args) {
 		
 		// Instanciamos el primer rectangulo llamado rectangulo1
-		Rectangulo rectangulo1 = new Rectangulo();
+		RectanguloA rectangulo1 = new RectanguloA();
 		
 		// Instanciamos el segundo rectangulo llamado rectangulo2
-		Rectangulo rectangulo2 = new Rectangulo();
+		RectanguloA rectangulo2 = new RectanguloA();
 		
 		// Creamos la variable longitudX para almacenar la longitud horizontal
 		int longitudX;
@@ -44,7 +44,7 @@ public class PrincipalRectangulo {
 			for (int j = 1 ; j <= 2 ; j++) {
 				
 				// Controlamos los turnos
-				Rectangulo rectangulo = (j == 1) ? rectangulo1 : rectangulo2;
+				RectanguloA rectangulo = (j == 1) ? rectangulo1 : rectangulo2;
 				
 				// Mostramos el nombre del rectangulo
 				System.out.println("RECTANGULO " + j);

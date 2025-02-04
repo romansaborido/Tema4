@@ -1,6 +1,6 @@
 package boletin1.ejercicio4;
 
-public class Artículo {
+public class ArtículoA {
 
 	// Creamos el atributo nombre para almacenar el nombre del articulo
 	String nombre;

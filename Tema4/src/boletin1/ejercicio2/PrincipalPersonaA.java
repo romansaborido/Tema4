@@ -2,15 +2,15 @@ package boletin1.ejercicio2;
 
 import java.util.Scanner;
 
-public class PrincipalPersona {
+public class PrincipalPersonaA {
 
 	public static void main(String[] args) {
 
 		// Instanciamos la primera persona llamada per1
-		Persona per1 = new Persona();
+		PersonaA per1 = new PersonaA();
 
 		// Instanciamos la primera persona llamada per2
-		Persona per2 = new Persona();
+		PersonaA per2 = new PersonaA();
 
 		// Creamos el scanner
 		Scanner reader = new Scanner(System.in);
@@ -19,7 +19,7 @@ public class PrincipalPersona {
 		for (int i = 1; i <= 2; i++) {
 
 			// Controlamos la persona que estamos modificando
-			Persona persona = (i == 1) ? per1 : per2;
+			PersonaA persona = (i == 1) ? per1 : per2;
 
 			// Pedimos al usuario que introduzca los datos de la primera persona
 			System.out.println("Introduzca los datos de PERSONA " + i);
