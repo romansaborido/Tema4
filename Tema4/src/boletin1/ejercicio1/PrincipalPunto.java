@@ -2,7 +2,7 @@ package boletin1.ejercicio1;
 
 import java.util.Scanner;
 
-public class PrincipalPuntoB {
+public class PrincipalPunto {
 
 	public static void main(String[] args) {
 		
@@ -12,14 +12,14 @@ public class PrincipalPuntoB {
 		// Creamos la variable y para almacenar la coordenada de Y que introduzca el usuario
 		int y;
 		
-		// Creamos el primer objeto punto llamado punto1
-		PuntoB punto1 = null;
+		// Declaramos el primer objeto punto llamado punto1
+		Punto punto1 = null;
 		
-		// Creamos el segundo objeto punto llamado punto2
-		PuntoB punto2 = null;
+		// Declaramos el segundo objeto punto llamado punto2
+		Punto punto2 = null;
 		
-		// Creamos el tercer objeto punto llamado punto3
-		PuntoB punto3 = null;
+		// Declaramos el tercer objeto punto llamado punto3
+		Punto punto3 = null;
 		
 		// Creamos el scanner
 		Scanner reader = new Scanner(System.in);
@@ -43,22 +43,27 @@ public class PrincipalPuntoB {
 			
 			// Creamos el objeto
 			if (i == 1) {
-				punto1 = new PuntoB(x, y);
+				punto1 = new Punto(x, y);
 			} else if (i == 2) {
-				punto2 = new PuntoB(x, y);
+				punto2 = new Punto(x, y);
 			} else {
-				punto3 = new PuntoB(x, y);
+				punto3 = new Punto(x, y);
 			}
 		}
-				
-		// Imprimimos las coordenadas de punto1
-		System.out.println("Punto 1 -> (" + punto1.x + "," + punto1.y + ")");
+		
+		// Modificamos una coordenada en cada uno de los puntos
+		punto1.setX(7);
+		punto2.setY(2);
+		punto3.setX(100);
 		
 		// Imprimimos las coordenadas de punto1
-		System.out.println("Punto 2 -> (" + punto2.x + "," + punto2.y + ")");
+		System.out.println("Punto 1 -> (" + punto1.getX() + "," + punto1.getY() + ")");
+		
+		// Imprimimos las coordenadas de punto1
+		System.out.println("Punto 2 -> (" + punto2.getX() + "," + punto2.getY() + ")");
 				
 		// Imprimimos las coordenadas de punto1
-		System.out.println("Punto 3 -> (" + punto3.x + "," + punto3.y + ")" + "\n");
+		System.out.println("Punto 3 -> (" + punto3.getX() + "," + punto3.getY() + ")" + "\n");
 		
 		// Cerramos el scanner
 		reader.close();
