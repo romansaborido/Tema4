@@ -9,7 +9,7 @@ public class Artículo {
 	private double precio;
 	
 	// Creamos el atributo IVA para almacenar el IVA del articulo (siempre sera el mismo)
-	static final double IVA = 21;
+	public static final double IVA = 21;
 	
 	// Creamos el atributo cuantosQuedan para almacenar el stock del articulo
 	private int cuantosQuedan;
@@ -32,4 +32,38 @@ public class Artículo {
 			this.cuantosQuedan = cuantosQuedan;
 		}
 	}
+
+
+	public String getNombre() {
+		return nombre;
+	}
+
+
+	double getPrecio() {
+		return precio;
+	}
+	
+	
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
+
+	public int getCuantosQuedan() {
+		return cuantosQuedan;
+	}
+
+
+	public void setCuantosQuedan(int cuantosQuedan) {
+		this.cuantosQuedan = cuantosQuedan;
+	}
+	
+	
+	
+	
 }

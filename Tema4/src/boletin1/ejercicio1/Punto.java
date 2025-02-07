@@ -49,4 +49,36 @@ public class Punto {
 	public void setY(int y) {
 		this.y = y;
 	}
+	
+	/**
+	 * Método para cambiar las dos coordenadas del punto
+	 * @param x Nueva coordenada horizontal
+	 * @param y Nueva coordenada vertical
+	 */
+	public void setXY(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	/**
+	 * Método para desplazar la posicion del punto
+	 * @param dx Coordenadas a desplazar horizontalmente
+	 * @param dy Coordenadas a desplazar verticalmente
+	 */
+	public void desplaza(int dx, int dy) {
+		this.x = x + dx;
+		this.y = y + dy;
+	}
+	
+	public double distancia(Punto p) {
+	
+		double coordenadaDistancia = 0.0;
+		
+		double thisCoordenada;
+		double pCoordenada;
+		
+		
+		return coordenadaDistancia;
+		
+	}
 }
