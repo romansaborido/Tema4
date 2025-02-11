@@ -113,4 +113,94 @@ public class Rectangulo {
 			this.y2 = y2;
 		}
 	}
+	
+	
+	
+	/**
+	 * Modifica las coordenadas horizontales
+	 * @param x1. Primera coordenada horizontal
+	 * @param x2. Segunda coordenada horizontal
+	 */
+	public void setX1Y1(int x1, int x2) {
+		this.x1 = x1;
+		this.x2 = x2;
+	}
+	
+	
+	/**
+	 * Modifica las coordenadas verticales
+	 * @param y1. Primera coordenada vertical
+	 * @param y2. Segunda coordenada vertical
+	 */
+	public void setX2Y2(int y1, int y2) {
+		this.y1 = y1;
+		this.y2 = y2;
+	}
+	
+	
+	/**
+	 * Modifica todas las coordenadas del rectangulo
+	 * @param x1. Primera coordenada horizontal
+	 * @param x2. Segunda coordenada horizontal
+	 * @param y1. Primera coordenada vertical
+	 * @param y2. Segunda coordenada vertical
+	 */
+	public void setAll(int x1, int x2, int y1, int y2) {
+		this.x1 = x1;
+		this.x2 = x2;
+		this.y1 = y1;
+		this.y2 = y2;
+	}
+	
+	
+	/**
+	 * Devuelve el perimetro del rectangulo
+	 * @return Entero que representa el perimetro del rectangulo
+	 */
+	public int getPerimetro() {
+		
+		int perimetro;
+		
+		// Calculamos la longitud de los lados
+		int longitudX = this.x1 > this.x2 ? this.x1 - this.x2 : this.x2 - this.x1;
+		int longitudY = this.y1 > this.y2 ? this.y1 - this.y2 : this.y2 - this.y1;
+		
+		// Calculamos el perimetro
+		perimetro = longitudX + longitudY;
+		
+		return perimetro;
+	}
+	
+	
+	/**
+	 * Devuelve el area del rectangulo 
+	 * @return Entero que representa el area del rectangulo
+	 */
+	public int getArea() {
+		
+		int area = 0;
+		
+		// Calculamos la longitud de los lados
+		int longitudX = this.x1 > this.x2 ? this.x1 - this.x2 : this.x2 - this.x1;
+		int longitudY = this.y1 > this.y2 ? this.y1 - this.y2 : this.y2 - this.y1;
+		
+		// Calculamos el area
+		area = longitudX * longitudY;
+		
+		return area;
+	}
+	
+	@Override
+	public String toString() {
+
+		String rectangulo = "";
+		
+		// Convertimos las coordenadas a String
+		rectangulo += "Coordenada 1 -> " + "(" + this.x1 + "," + this.y1 + ")" + "\n" +
+		"Coordenada 2 -> " + "(" + this.x2 + "," + this.y2 + ")";
+		
+		return rectangulo;
+	}
+	
+	
 }

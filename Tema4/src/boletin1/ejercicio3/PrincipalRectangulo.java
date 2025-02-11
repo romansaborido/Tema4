@@ -13,12 +13,6 @@ public class PrincipalRectangulo {
 		// Instanciamos el segundo rectangulo llamado rectangulo2
 		Rectangulo rectangulo2 = null;
 		
-		// Creamos la variable longitudX para almacenar la longitud horizontal
-		int longitudX;
-		
-		// Creamos la variable longitudY para almacenar la longitud vertical
-		int longitudY;
-		
 		// Creamos la variable x1 para almacenar la primera coordenada horizontal
 		int x1;
 		
@@ -67,38 +61,38 @@ public class PrincipalRectangulo {
 			System.out.println();
 		}
 			
-		// Modificamos los atributos de los rectangulos
-		for (int i = 1 ; i <= 2 ; i++) {
-			
-			// Controlamos que objeto estamos modificando
-			Rectangulo rectangulo = (i == 1) ? rectangulo1 : rectangulo2;
-			
-			// Mostramos que objeto estamos modificando
-			System.out.println("RECTANGULO " + i);
-			
-			// Pedimos al usuario que modifique la coordenada X1
-			System.out.println("Modifica la coordenada X1");
-			x1 = reader.nextInt();
-			rectangulo.setX1(x1);
-			
-			// Pedimos al usuario que modifique la coordenada X2
-			System.out.println("Modifica la coordenada X2");
-			x2 = reader.nextInt();
-			rectangulo.setX2(x2);
-			
-			// Pedimos al usuario que modifique la coordenada Y1
-			System.out.println("Modifica la coordenada Y1");
-			y1 = reader.nextInt();
-			rectangulo.setY1(y1);
-			
-			// Pedimos al usuario que modifique la coordenada Y2
-			System.out.println("Modifica la coordenada Y2");
-			y2 = reader.nextInt();
-			rectangulo.setY2(y2);
-			
-			// Salto de linea
-			System.out.println();
-		}
+//		// Modificamos los atributos de los rectangulos
+//		for (int i = 1 ; i <= 2 ; i++) {
+//			
+//			// Controlamos que objeto estamos modificando
+//			Rectangulo rectangulo = (i == 1) ? rectangulo1 : rectangulo2;
+//			
+//			// Mostramos que objeto estamos modificando
+//			System.out.println("RECTANGULO " + i);
+//			
+//			// Pedimos al usuario que modifique la coordenada X1
+//			System.out.println("Modifica la coordenada X1");
+//			x1 = reader.nextInt();
+//			rectangulo.setX1(x1);
+//			
+//			// Pedimos al usuario que modifique la coordenada X2
+//			System.out.println("Modifica la coordenada X2");
+//			x2 = reader.nextInt();
+//			rectangulo.setX2(x2);
+//			
+//			// Pedimos al usuario que modifique la coordenada Y1
+//			System.out.println("Modifica la coordenada Y1");
+//			y1 = reader.nextInt();
+//			rectangulo.setY1(y1);
+//			
+//			// Pedimos al usuario que modifique la coordenada Y2
+//			System.out.println("Modifica la coordenada Y2");
+//			y2 = reader.nextInt();
+//			rectangulo.setY2(y2);
+//			
+//			// Salto de linea
+//			System.out.println();
+//		}
 		
 		
 		// Mostramos las propiedades de los rectangulos
@@ -113,20 +107,27 @@ public class PrincipalRectangulo {
 			// Mostramos las coordenadas
 			System.out.println("Coordenadas -> " + "(" + rectangulo.getX1() + "," + rectangulo.getY1() + ")" + " " + "(" + rectangulo.getX2() + "," + rectangulo.getY2() + ")");
 				
-			// Calculamos la longitud de los lados
-			longitudX = rectangulo.getX1() > rectangulo.getX2() ? rectangulo.getX1() - rectangulo.getX2() : rectangulo.getX2() - rectangulo.getX1();
-			longitudY = rectangulo.getY1() > rectangulo.getY2() ? rectangulo.getY1() - rectangulo.getY2() : rectangulo.getY2() - rectangulo.getY1();
-				
-			// Mostramos el perimetro
-			System.out.println("Perímetro -> " + (longitudX + longitudY));
-				
-			// Mostramos el area 
-			System.out.println("Área -> " + (longitudX * longitudY));
+			// Mostramos el perimetro usando el metodo getPerimetro
+			System.out.println("Perímetro -> "  + rectangulo.getPerimetro());
+			
+			// Mostramos el area usando el metodo getArea
+			System.out.println("Área -> " + rectangulo.getArea());
 				
 			// Salto de linea
 			System.out.println();
 		}
-			
+		
+		// Probamos el metodo setX1Y1, setX2Y2 y toString
+		System.out.println("RECTÁNGULO 1");
+		rectangulo1.setX1Y1(10, 20);
+		rectangulo1.setX2Y2(20, 40);
+		System.out.println(rectangulo1.toString() + "\n");
+		
+		// Probamos el metodo setAll y toString
+		System.out.println("RECTÁNGULO 2");
+		rectangulo2.setAll(10, 20, 20, 40);
+		System.out.println(rectangulo2.toString());
+		
 		// Cerramos el scanner
 		reader.close();
 		

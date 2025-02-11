@@ -1,5 +1,6 @@
 package boletin1.ejercicio1;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class PrincipalPunto {
@@ -21,8 +22,15 @@ public class PrincipalPunto {
 		// Declaramos el tercer objeto punto llamado punto3
 		Punto punto3 = null;
 		
+		// Creamos un objeto DecimalFormat con el patrón para un decimal
+        DecimalFormat df = new DecimalFormat("#.#");
+		
+		// Creamos la variable distancia para almacenar el resultado del metodo distancia
+		double distancia;
+		
 		// Creamos el scanner
 		Scanner reader = new Scanner(System.in);
+		
 		
 		// Instanciamos los tres puntos
 		for (int i = 1 ; i <= 3 ; i++) {
@@ -51,10 +59,6 @@ public class PrincipalPunto {
 			}
 		}
 		
-		// Modificamos una coordenada en cada uno de los puntos
-		punto1.setX(7);
-		punto2.setY(2);
-		punto3.setX(100);
 		
 		// Imprimimos las coordenadas de punto1
 		System.out.println("Punto 1 -> (" + punto1.getX() + "," + punto1.getY() + ")");
@@ -64,6 +68,22 @@ public class PrincipalPunto {
 				
 		// Imprimimos las coordenadas de punto1
 		System.out.println("Punto 3 -> (" + punto3.getX() + "," + punto3.getY() + ")" + "\n");
+		
+		// Probamos el metodo toString
+		System.out.println("Posicion punto1 -> " + punto1.toString());
+		
+		// Probamos el metodo distancia
+		distancia = punto1.distancia(punto2);
+		System.out.println("Distancia entre punto1 y punto2 -> " + df.format(distancia));
+		
+		// Probamos el metodo desplaza
+		punto3.desplaza(7, -2);
+		System.out.println("Punto 3 desplazado -> " + punto3);
+		
+		// Probamos el metodo setXY
+		punto3.setXY(100,4);
+		System.out.println("Posicion de punto3 modificada -> " + punto3);
+		
 		
 		// Cerramos el scanner
 		reader.close();

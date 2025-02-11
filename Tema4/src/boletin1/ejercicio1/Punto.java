@@ -50,6 +50,8 @@ public class Punto {
 		this.y = y;
 	}
 	
+	
+	
 	/**
 	 * Método para cambiar las dos coordenadas del punto
 	 * @param x Nueva coordenada horizontal
@@ -59,6 +61,7 @@ public class Punto {
 		this.x = x;
 		this.y = y;
 	}
+	
 	
 	/**
 	 * Método para desplazar la posicion del punto
@@ -70,15 +73,39 @@ public class Punto {
 		this.y = y + dy;
 	}
 	
-	public double distancia(Punto p) {
 	
+	/**
+	 * Método para sacar la distancia de un punto y otro
+	 * @param p Coordenada de un punto
+	 * @return Distancia entre los puntos
+	 */
+	public double distancia(Punto p) {
+		
+		// Creamos la variable double coordenadaDistancia
 		double coordenadaDistancia = 0.0;
 		
-		double thisCoordenada;
-		double pCoordenada;
-		
-		
+		// Calcula la diferencia entre las coordenadas x y y
+        double deltaX = this.x - p.getX();
+        double deltaY = this.y - p.getY();
+
+        // Aplica la fórmula de distancia Euclidiana
+        coordenadaDistancia = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+        
+        // Devolvemos la distancia
 		return coordenadaDistancia;
+	}
+	
+	
+	@ Override
+	public String toString() {
 		
+		// Creamos la cadena punto
+		String punto;
+		
+		// Convertimos la posicion del punto a string
+		punto = "(" + this.x + "," + this.y + ")";
+		
+		// Devolvemos la cadena
+		return punto;
 	}
 }

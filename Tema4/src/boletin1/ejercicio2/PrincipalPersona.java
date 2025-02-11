@@ -17,6 +17,9 @@ public class PrincipalPersona {
 		String nombre;
 		String apellidos;
 		int edad;
+		
+		// Creamos la variable diferenciaEdad para almacenar el resultado del metodo
+		int diferenciaEdad;
 
 		// Creamos el scanner
 		Scanner reader = new Scanner(System.in);
@@ -58,35 +61,35 @@ public class PrincipalPersona {
 		}
 		
 		// Modificamos los datos de las dos personas
-		for (int i = 1 ; i <= 2 ; i++) {
-			
-			// Controlamos la persona que estamos modificando
-			Persona persona = (i == 1) ? per1 : per2;
-			
-			// Indicamos la persona que estamos modificando
-			System.out.println("Modifica los datos de PERSONA " + i);
-			
-			// Pedimos al usuario que modifique el nombre
-			System.out.print("NOMBRE: ");
-			nombre = reader.nextLine();
-			persona.setNombre(nombre);
-			
-			// Pedimos al usuario que modifique los apellidos
-			System.out.print("APELLIDOS: ");
-			apellidos = reader.nextLine();
-			persona.setApellidos(apellidos);
-			
-			// Pedimos al usuario que modifique la edad
-			System.out.print("EDAD: ");
-			edad = reader.nextInt();
-			persona.setEdad(edad);	
-			
-			// Limpiamos el buffer del scanner
-			reader.nextLine();
-			
-			// Salto de linea
-			System.out.println();
-		}
+//		for (int i = 1 ; i <= 2 ; i++) {
+//			
+//			// Controlamos la persona que estamos modificando
+//			Persona persona = (i == 1) ? per1 : per2;
+//			
+//			// Indicamos la persona que estamos modificando
+//			System.out.println("Modifica los datos de PERSONA " + i);
+//			
+//			// Pedimos al usuario que modifique el nombre
+//			System.out.print("NOMBRE: ");
+//			nombre = reader.nextLine();
+//			persona.setNombre(nombre);
+//			
+//			// Pedimos al usuario que modifique los apellidos
+//			System.out.print("APELLIDOS: ");
+//			apellidos = reader.nextLine();
+//			persona.setApellidos(apellidos);
+//			
+//			// Pedimos al usuario que modifique la edad
+//			System.out.print("EDAD: ");
+//			edad = reader.nextInt();
+//			persona.setEdad(edad);	
+//			
+//			// Limpiamos el buffer del scanner
+//			reader.nextLine();
+//			
+//			// Salto de linea
+//			System.out.println();
+//		}
 		
 		// Mostramos los datos de las dos personas
 		for (int i = 1 ; i <= 2 ; i++) {
@@ -94,14 +97,34 @@ public class PrincipalPersona {
 			// Controlamos la persona de la cual estamos mostrando los datos
 			Persona persona = (i == 1) ? per1 : per2;
 			
-			// Mostramos los datos
+			// Mostramos los datos y probamos el metodo esMayorEdad
 			System.out.print("PERSONA " + i + " -> " + persona.getNombre() + " " + persona.getApellidos() + " con DNI " + persona.getDni());
-			if (persona.getEdad() >= 18) {
-				System.out.print(" es mayor de edad" + "\n");
+			if (persona.esMayorEdad()) {
+				System.out.print(" es mayor de edad y");
 			} else {
-				System.out.print(" es menor de edad" + "\n");
+				System.out.print(" es menor de edad y");
+			}
+			
+			// Probamos el metodo esJubilado
+			if (persona.esJubilado()) {
+				System.out.println(" es jubilado" + "\n");
+			} else {
+				System.out.println(" no es jubilado" + "\n");
 			}
 		}
+		
+		// Probamos el metodo diferenciaEdad
+		diferenciaEdad = per1.diferenciaEdad(per2);
+		System.out.println("La diferencia de edad entre " + per1.getNombre() + " y " + per2.getNombre() + " es de " + diferenciaEdad + " año/s" + "\n");
+		
+		// Probamos el metodo toString
+		System.out.println("DATOS DE LA PERSONA 1");
+		System.out.println(per1.toString());
+		
+		System.out.println("DATOS DE LA PERSONA 2");
+		System.out.println(per2.toString());
+		
+		
 		// Cerramos el scanner
 		reader.close();
 

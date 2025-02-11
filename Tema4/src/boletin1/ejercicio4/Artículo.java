@@ -15,6 +15,7 @@ public class Artículo {
 	private int cuantosQuedan;
 	
 	
+	
 	/**
 	 * Constructor con todos los atributos
 	 * @param nombre. No puede ser null o blanco
@@ -33,34 +34,115 @@ public class Artículo {
 		}
 	}
 
-
+	
+	
+	/**
+	 * Muestra el nombre del articulo
+	 * @return Nombre del articulo
+	 */
 	public String getNombre() {
 		return nombre;
 	}
 
 
+	/**
+	 * Muestra el precio del articulo
+	 * @return Precio del articulo
+	 */
 	double getPrecio() {
 		return precio;
 	}
 	
 	
-	
+	/**
+	 * Modifica el nombre del articulo
+	 * @param nombre. Nuevo nombre del articulo
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
+	
+	/**
+	 * Modifica el precio del articulo
+	 * @param precio. Nuevo precio del articulo
+	 */
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
 
 
+	/**
+	 * Muestra la cantidad de stock del articulo
+	 * @return Stock del articulo
+	 */
 	public int getCuantosQuedan() {
 		return cuantosQuedan;
 	}
 
 
+	/**
+	 * Muestra cuantos articulos quedan 
+	 * @param cuantosQuedan. Numero de articulos que quedan disponibles
+	 */
 	public void setCuantosQuedan(int cuantosQuedan) {
 		this.cuantosQuedan = cuantosQuedan;
+	}
+	
+	
+	/**
+	 * Devuelve el precio de venta al publico con IVA incluido
+	 * @return
+	 */
+	public double getPVP() {
+		
+		double pvp = 0.0;
+		
+		return pvp;
+		
+	}
+	
+	
+	/**
+	 * Devuelve el PVP con un descuento pasado como argumento
+	 * @param descuento
+	 * @return
+	 */
+	public double getPVPDescuento(double descuento) {
+		
+		double pvpDescuento = 0.0;
+		
+		return pvpDescuento;
+		
+	}
+	
+	
+	/**
+	 * Actualiza los atributos del objeto tras vender una cantidad 
+	 * @return. Si es posible devolvera true, false en caso contrario
+	 */
+	public boolean vender(int cantidad) {
+		
+		boolean esPosible = false;
+		
+		return esPosible;
+	}
+	
+	
+	/**
+	 * Actualiza los atributos del objeto tras almacenar una cantidad
+	 * @param cantidad
+	 */
+	public void almacenar(int cantidad) {
+		
+	}
+	
+	
+	@Override
+	public String toString() {
+		String articulo = "";
+		
+		return articulo;
 	}
 	
 	
