@@ -17,6 +17,8 @@ public class PrincipalFuncionesMatematicas {
 		System.out.println(FuncionesMatematicas.sumatorio(numero));
 		System.out.println(FuncionesMatematicas.potencia(a,numero));
 		System.out.println(FuncionesMatematicas.serieFibonacci(numero));
+		
+		reader.close();
 	}
 
 }

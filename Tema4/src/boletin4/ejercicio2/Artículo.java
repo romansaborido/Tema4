@@ -1,5 +1,7 @@
 package boletin4.ejercicio2;
 
+import java.util.Objects;
+
 public class Artículo {
 
 	// Creamos el atributo nombre para almacenar el nombre del articulo
@@ -13,7 +15,6 @@ public class Artículo {
 	
 	// Creamos el atributo cuantosQuedan para almacenar el stock del articulo
 	private int cuantosQuedan;
-	
 	
 	
 	/**
@@ -33,8 +34,6 @@ public class Artículo {
 			this.cuantosQuedan = cuantosQuedan;
 		}
 	}
-
-	
 	
 	/**
 	 * Muestra el nombre del articulo
@@ -44,25 +43,14 @@ public class Artículo {
 		return nombre;
 	}
 
-
 	/**
 	 * Muestra el precio del articulo
 	 * @return Precio del articulo
 	 */
-	double getPrecio() {
+	public double getPrecio() {
 		return precio;
 	}
-	
-	
-	/**
-	 * Modifica el nombre del articulo
-	 * @param nombre. Nuevo nombre del articulo
-	 */
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
 
-	
 	/**
 	 * Modifica el precio del articulo
 	 * @param precio. Nuevo precio del articulo
@@ -70,7 +58,6 @@ public class Artículo {
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}
-
 
 	/**
 	 * Muestra la cantidad de stock del articulo
@@ -80,72 +67,83 @@ public class Artículo {
 		return cuantosQuedan;
 	}
 
-
 	/**
-	 * Muestra cuantos articulos quedan 
-	 * @param cuantosQuedan. Numero de articulos que quedan disponibles
+	 * Modifica la cantidad de stock del articulo
+	 * @param cuantosQuedan. Nuevo stock del articulo
 	 */
 	public void setCuantosQuedan(int cuantosQuedan) {
 		this.cuantosQuedan = cuantosQuedan;
 	}
 	
-	
 	/**
 	 * Devuelve el precio de venta al publico con IVA incluido
-	 * @return
+	 * @return El precio con IVA incluido
 	 */
 	public double getPVP() {
 		
-		double pvp = 0.0;
-		
-		return pvp;
-		
+		// El PVP se calcula como el precio + el IVA sobre el precio
+		return precio + (precio * IVA / 100);
 	}
-	
 	
 	/**
 	 * Devuelve el PVP con un descuento pasado como argumento
-	 * @param descuento
-	 * @return
+	 * @param descuento Porcentaje de descuento (0-100)
+	 * @return El precio con IVA y descuento incluido
 	 */
 	public double getPVPDescuento(double descuento) {
 		
-		double pvpDescuento = 0.0;
+		// El descuento es sobre el precio base (sin IVA)
+		double precioConDescuento = precio - (precio * descuento / 100);
 		
-		return pvpDescuento;
-		
+		// Luego calculamos el PVP con IVA sobre el precio con descuento
+		return precioConDescuento + (precioConDescuento * IVA / 100);
 	}
-	
 	
 	/**
 	 * Actualiza los atributos del objeto tras vender una cantidad 
-	 * @return. Si es posible devolvera true, false en caso contrario
+	 * @param cantidad. Cantidad de artículos a vender
+	 * @return Devuelve true si la venta es posible (hay suficiente stock), false en caso contrario
 	 */
 	public boolean vender(int cantidad) {
 		
-		boolean esPosible = false;
+		boolean res = false;
 		
-		return esPosible;
+		// Verificamos si hay suficiente stock
+		if (cantidad <= cuantosQuedan) {
+			
+			// Actualizamos el stock
+			cuantosQuedan -= cantidad;
+			
+			res = true;
+		}
+		
+		// Si no hay suficiente stock, no se puede vender
+		return res;
 	}
-	
 	
 	/**
 	 * Actualiza los atributos del objeto tras almacenar una cantidad
-	 * @param cantidad
+	 * @param cantidad. Cantidad de artículos a almacenar
 	 */
 	public void almacenar(int cantidad) {
 		
+		// Añadimos la cantidad almacenada al stock
+		cuantosQuedan += cantidad;
 	}
-	
 	
 	@Override
 	public String toString() {
-		String articulo = "";
 		
-		return articulo;
+		// Devolvemos una representación del objeto con sus atributos
+		return "Artículo: " + nombre + "\n" +
+		       "Precio sin IVA: " + precio + "€\n" +
+		       "Stock disponible: " + cuantosQuedan + " unidades\n" +
+		       "PVP con IVA: " + getPVP() + "€";
 	}
 	
-	
-	
-	
+	@Override
+	public int hashCode() {
+		return Objects.hash(nombre);
+	}
 }
+
