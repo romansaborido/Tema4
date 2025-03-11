@@ -1,4 +1,4 @@
-package boletin4.ejercicio4;
+package crud.ejercicio4;
 
 import java.util.Objects;
 

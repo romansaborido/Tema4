@@ -1,4 +1,4 @@
-package boletin4.ejercicio2;
+package crud.ejercicio2;
 
 import java.util.Scanner;
 

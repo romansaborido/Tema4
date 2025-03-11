@@ -1,4 +1,4 @@
-package boletin4.ejercicio1;
+package crud.ejercicio1;
 
 public class Alumno {
 	
