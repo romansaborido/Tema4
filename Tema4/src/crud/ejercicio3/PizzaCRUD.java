@@ -32,11 +32,22 @@ public class PizzaCRUD {
 	}
 	
 	
-	//public static boolean pizzaServida(String estado) {
+	public static boolean pizzaServida(int codigo) {
 		
+		// Creamos un objeto pizza
+		Pizza p = null;
 		
-		// Corregir clase Pizza
-	//}
-	
+		// Recorremos el conjunto pedidos
+		for (Pizza pbusqueda : pedidos) {
+			
+			// Si los codigos son iguales
+			if (pbusqueda.getCodigo() == codigo) {
+				p = pbusqueda;
+			}
+		}
+		
+		// Cambiamos el estado de la pizza
+		return p.setEstado("SERVIDA");
+	}
 	
 }

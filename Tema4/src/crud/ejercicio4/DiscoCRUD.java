@@ -9,7 +9,6 @@ public class DiscoCRUD {
 	
 	public static void listado() {
 		for (Disco disco : discos) {
-			System.out.println("--------------------");
 			System.out.println(disco);
 			System.out.println("--------------------");
 		}

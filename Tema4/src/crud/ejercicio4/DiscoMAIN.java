@@ -90,11 +90,14 @@ public class DiscoMAIN {
 	}
 
 
-	private static int codigo() {
+	static int codigo() {
+		
 		int codigo;
+		
 		System.out.println("Introduzca el código");
 		codigo = reader.nextInt();
 		reader.nextLine();
+		
 		return codigo;
 	}
 	

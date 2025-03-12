@@ -43,12 +43,10 @@ public class Pizza {
             this.codigo = codigo;
         }
         
-        // Asignación del tamaño
         switch (tamaño.toUpperCase()) {
             case "MEDIANA", "FAMILIAR" -> this.tamaño = Tamaño.valueOf(tamaño.toUpperCase());
         }
         
-        // Asignación del tipo
         switch (tipo.toUpperCase()) {
             case "MARGARITA", "CUATROQUESOS", "FUNGHI" -> this.tipo = Tipo.valueOf(tipo.toUpperCase());
         }
@@ -77,8 +75,18 @@ public class Pizza {
      * Setter para modificar el tamaño de la pizza
      * @param tamaño Tamaño de la pizza, puede ser MEDIANA o FAMILIAR
      */
-    public void setTamaño(Tamaño tamaño) {
-        this.tamaño = tamaño;
+    public boolean setTamaño(String tamaño) {
+    	
+    	boolean res = false;
+    	
+    	switch (tamaño) {
+        	case "MEDIANA", "FAMILIAR" -> {
+        		this.tamaño = Tamaño.valueOf(tamaño);
+        		res = true;
+        	}
+        }
+        	
+    	return res;
     }
 
     
@@ -94,8 +102,18 @@ public class Pizza {
      * Setter para modificar el tipo de la pizza
      * @param tipo Tipo de la pizza, puede ser MARGARITA, CUATROQUESOS o FUNGHI
      */
-    public void setTipo(Tipo tipo) {
-        this.tipo = tipo;
+    public boolean setTipo(String tipo) {
+    	
+    	boolean res = false;
+    	
+    	switch (tipo) {
+        	case "MARGARITA", "CUATROQUESOS", "FUNGHI" -> {
+        		this.tipo = Tipo.valueOf(tipo);
+        		res = true;
+        	}
+        }
+        	
+    	return res;
     }
 
     
@@ -111,8 +129,18 @@ public class Pizza {
      * Setter para modificar el estado de la pizza
      * @param estado Estado de la pizza, puede ser PEDIDA o SERVIDA
      */
-    public void setEstado(String estado) {
-        // Corregir
+    public boolean setEstado(String estado) {
+    	
+    	boolean res = false;
+    	
+    	switch (estado) {
+        	case "PEDIDA", "SERVIDA" -> {
+        		this.estado = Estado.valueOf(estado);
+        		res = true;
+        	}
+        }
+        	
+    	return res;
     }
 
     
