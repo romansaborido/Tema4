@@ -32,4 +32,37 @@ public class CuentaCorrienteCRUD {
 		// Devolvemos la cuenta
 		return cuenta;
 	}
+	
+	
+	/**
+	 * Elimina una cuenta corriente del conjunto de cuentas
+	 * @param cuenta Cuenta del titular que quiere darse de baja
+	 * @return True si la cuenta se ha eliminado correctamente, false si no se ha podido eliminar
+	 */
+	static public boolean eliminarCuenta(CuentaCorriente cuenta) {
+		
+		// Creamos el booleano res y lo inicializamos a false
+		boolean res = false;
+		
+		// Si hay dinero en la cuenta
+		if (cuenta.getSaldo() == 0) {
+			res = cuentas.remove(cuenta);
+		}
+		
+		// Devolvemos el booleano
+		return res;
+	}
+	
+	
+	/**
+	 * Añade una cuenta corriente del conjunto de cuentas
+	 * @param cuenta Cuenta del titular que quiere darse de alta
+	 * @return True si la cuenta se ha añadido correctamente, false si no se ha podido añadir
+	 */
+	static public boolean añadirCuenta(CuentaCorriente cuenta) {
+		return cuentas.add(cuenta);
+	}
+	
+	
 }
+
