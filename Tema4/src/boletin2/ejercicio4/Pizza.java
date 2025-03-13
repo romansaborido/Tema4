@@ -116,7 +116,9 @@ public class Pizza {
     }
 
     
-    
+    /**
+     * Metodo toString que devuelve en cadena los atributos de la pizza
+     */
     @Override
     public String toString() {
     	
@@ -131,6 +133,9 @@ public class Pizza {
     }
 
     
+    /**
+     * Metodo equals que determina si una pizza es igual que otra cuando tienen el mismo codigo
+     */
     @Override
     public boolean equals(Object obj) {
     	
@@ -145,6 +150,7 @@ public class Pizza {
         return sonIguales;
     }
 
+    
     /**
      * Método hashCode necesario cuando se sobrescribe equals
      * @return Código hash de la pizza basado en su código

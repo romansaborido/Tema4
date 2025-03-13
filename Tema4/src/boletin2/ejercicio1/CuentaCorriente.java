@@ -183,9 +183,10 @@ public class CuentaCorriente {
 	}
 	
 
-	
+	/**
+	 * Metodo toString que devuelve los atributos de la cuentaCorriente
+	 */
 	@Override
-
 	public String toString() {
 
 		String cuentaCorriente = "";
@@ -199,6 +200,9 @@ public class CuentaCorriente {
 	}
 
 	
+	/**
+	 * Metodo equals que determina si una cuenta es igual que otra si el dni y el nombre son los mismos
+	 */
 	@Override
 	public boolean equals(Object obj) {
 

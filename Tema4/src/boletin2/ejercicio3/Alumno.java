@@ -68,7 +68,9 @@ public class Alumno {
 	}
 	
 	
-	
+	/**
+	 * Metodo toString que devuelve en cadena los atributos del alumno
+	 */
 	@Override
 	public String toString() {
 		
@@ -80,6 +82,9 @@ public class Alumno {
 	}
 	
 	
+	/**
+	 * Metodo equals que determina si dos alumnos son iguales si tienen el mismo nombre
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		

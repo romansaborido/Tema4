@@ -221,7 +221,9 @@ public class Libro {
 	}
 	
 	
-	
+	/**
+	 * Metodo toString que devuelve los atributos de libro en cadena
+	 */
 	@Override
 	public String toString() {
 		
@@ -237,6 +239,9 @@ public class Libro {
 	}
 	
 	
+	/**
+	 * Metodo equals que determina si un libro es igual que otro si el titulo y el autor son los mismos
+	 */
 	@ Override
 	public boolean equals(Object objeto) {
 		
