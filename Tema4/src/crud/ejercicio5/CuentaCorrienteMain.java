@@ -7,13 +7,13 @@ public class CuentaCorrienteMain {
 	// Creamos el scanner
 	static Scanner reader = new Scanner(System.in);
 	
-	// Creamos la variable dni para almacenar el dni que introduzca el usuario
-	static String dni;
-	
 	public static void main(String[] args) {
 		
 		// Creamos un objeto CuentaCorriente llamado cuenta
 		CuentaCorriente cuenta;
+		
+		// Creamos la variable dni para almacenar el dni que introduzca el usuario
+		String dni;
 		
 		// Creamos la variable respuesta para almacenar la respuesta del usuario
 		String respuesta;
@@ -42,7 +42,7 @@ public class CuentaCorrienteMain {
 			if (respuesta.equalsIgnoreCase("si")) {
 				
 				// Creamos la cuenta
-				cuenta = crearCuenta();
+				cuenta = crearCuenta(dni);
 				
 				// Añadimos la cuenta al conjunto
 				if (CuentaCorrienteCRUD.añadirCuenta(cuenta)) {
@@ -152,7 +152,7 @@ public class CuentaCorrienteMain {
 	
 	
 	private static void menu() {
-		System.out.println("BIENVENIDO A TU CUENTA BBVA");
+		System.out.println("\n" + "BIENVENIDO A TU CUENTA BBVA");
 		System.out.println("---------------------------");
 		System.out.println("1. Ingresar dinero");
 		System.out.println("2. Retirar dinero");
@@ -162,7 +162,7 @@ public class CuentaCorrienteMain {
 	}
 	
 	
-	private static CuentaCorriente crearCuenta() {
+	private static CuentaCorriente crearCuenta(String dni) {
 		
 		// Creamos estas variables para almacenar los valores de los atributos de la cuenta
 		int saldo;
