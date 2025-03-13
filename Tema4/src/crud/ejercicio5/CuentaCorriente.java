@@ -67,6 +67,36 @@ public class CuentaCorriente {
 		return res;
 	}
 	
+
+	public boolean ingresarDinero(int cantidad) {
+		
+		// Creamos un booleano y lo inicializamos a false
+		boolean res = false;
+		
+		// Ingresamos el dinero
+		if (cantidad > 0) {
+			this.saldo = this.saldo + cantidad;
+			res = true;
+		}
+		
+		return res;
+	}
+	
+	
+	public boolean sacarDinero(int cantidad) {
+		
+		// Creamos un booleano y lo inicializamos a false
+		boolean res = false;
+
+		// Retiramos el dinero
+		if (cantidad <= this.saldo) {
+			this.saldo = this.saldo - cantidad;
+			res = true;
+		}
+
+		return res;
+	}
+	
 	
 	@Override
 	public boolean equals(Object obj) {
