@@ -55,6 +55,19 @@ public class CuentaCorriente {
 	}
 	
 	
+	public boolean setSaldo(int saldo) {
+		
+		boolean res = false;
+		
+		if (saldo >= 0) {
+			this.saldo = saldo;
+			res = true;
+		}
+		
+		return res;
+	}
+	
+	
 	@Override
 	public boolean equals(Object obj) {
 		
